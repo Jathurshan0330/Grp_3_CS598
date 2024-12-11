@@ -1,0 +1,14 @@
+is patching into 1s working properly: Checked (input : B C T, output : B*C*T//patchsize 1 patchsize)
+also if there are multiple channels: first (patchsize 1s) 30 samples belongs to C-1 then next 30 samples belong to C-2, then new recordings.
+
+SHHS data in processed_all are same in serv04 and serv05 ---> checked.
+
+
+ablation:
+codebook size + 
+bpe vocab size
+
+hyper param tuning:
+beta in commitment loss
+token embed dim 
+

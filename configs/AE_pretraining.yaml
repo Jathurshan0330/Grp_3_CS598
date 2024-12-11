@@ -1,0 +1,47 @@
+# vqvae_pretraining.yaml
+
+
+# specific config for LaBRAM decoding task
+LaBRAM:
+  ae:
+    in_channels: 1
+    emb_size: 64
+    encoder_type: 'temporal_1d_conv'
+    decoder_task: 'LaBRAM'
+    token_patch_size: 1 #1s
+
+temporal_recon:
+  ae:
+    in_channels: 1
+    emb_size: 64
+    encoder_type: 'temporal_1d_conv'
+    decoder_task: 'temporal_recon'
+    token_patch_size: 1 #1s
+
+
+  
+Dataset:
+  SHHS:
+    sampling_freq: 125
+    channels: [0,5] # only EEG channels
+    data_dir: '/srv/local/data/SHHS/processed_all'
+    ae_patch_size: 25
+    ae_smallest_kernel_divider: 5
+    ae_max_seq_len: 5
+    ae_decoder_out_dim:
+      LaBRAM: 62
+      temporal_recon: 125
+
+
+Training:
+  batch_size: 256
+  num_workers: 8
+  experiment_path: '/home/jp65/Biosignals_Research/EEG_BPE_Experiments/ae_pretraining'
+  optimizer: AdamW
+  lr: 0.00001 #1e-5
+  weight_decay: 0.0001 #1e-4
+  beta1: 0.9
+  beta2: 0.99
+  num_pretrain_epochs: 50 # 50
+    
+

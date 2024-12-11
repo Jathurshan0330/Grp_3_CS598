@@ -1,0 +1,65 @@
+# vqvae_pretraining.yaml
+
+
+Tokenizer:
+  1dcnn:
+    SHHS:
+      in_channels: 2
+      token_patch_size: 125
+      kernel_1: 25
+      stride_1: 25
+      kernel_2: 5
+      stride_2: 5
+      emb_size: 64
+      num_heads: 4
+      depth: 4
+      max_seq_len: 1024
+      num_classes: 5
+
+  stft:
+    SHHS:
+      in_channels: 2
+      nfft: 129
+      win_length: 125
+      hop_length: 125
+      emb_size: 64
+      num_heads: 4
+      depth: 4
+      max_seq_len: 1024
+      num_classes: 5
+
+  stft_1dcnn:
+    SHHS:
+      in_channels: 2
+      nfft: 129
+      win_length: 125
+      hop_length: 125
+      emb_size: 64
+      num_heads: 4
+      depth: 4
+      max_seq_len: 1024
+      num_classes: 5
+
+
+
+  
+Dataset:
+  SHHS:
+    sampling_freq: 125
+    channels: [0,5] # only EEG channels
+    data_dir: '/srv/local/data/SHHS/processed_all'
+    
+
+
+Training:
+  batch_size: 256
+  num_workers: 8
+  experiment_path: '/home/jp65/Biosignals_Research/EEG_BPE_Experiments/baseline_classification'
+  optimizer: AdamW
+  lr: 0.0001 #1e-4
+  weight_decay: 0.00001 #1e-5
+  beta1: 0.9
+  beta2: 0.99
+  num_epochs: 50  #50
+    
+
