@@ -1,4 +1,4 @@
-# Group 3 Eval Reproductions
+# Group 3 Learning Tokenization Methods for EEG Signals
 
 This repository contains code for to reproduce synthetic signal experiments and validation of byte-pair encoding.
 
