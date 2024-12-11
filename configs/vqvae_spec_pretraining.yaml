@@ -34,18 +34,18 @@ temporal:
 Dataset:
   SHHS:
     channels: [0,5] # only EEG channels
-    data_dir: '/srv/local/data/SHHS/processed_all'
+    data_dir: 'SET THE PATH TO THE SHHS DATASET'
     num_classes: 5
     num_channels: 2
     classification_task: 'multi_class'
   TUAB:
-    data_dir: '/srv/local/data/jp65/TUAB_processed/processed_all' #'/srv/local/data/jp65/TUAB_processed_filtered/processed_all/' #'/srv/local/data/jp65/TUAB_processed/processed_all'
+    data_dir: 'SET THE PATH TO THE TUAB DATASET'
     channels: ''
     num_classes: 1  # to define the output dimension of the classifier
     num_channels: 16
     classification_task: 'binary'
   TUEV:
-    data_dir: '/srv/local/data/jp65/TUEV_processed/' #'/srv/local/data/jp65/TUEV_processed_filtered/' #'/srv/local/data/jp65/TUEV_processed/'
+    data_dir: 'SET THE PATH TO THE TUEV DATASET'
     channels: ''
     num_classes: 6
     num_channels: 16
@@ -56,7 +56,7 @@ Dataset:
 vqvae_training:
   batch_size: 512 #1024 #256 #24    # 1024 for SHHS, TUAB       #512 for TUAB temporal
   num_workers: 8
-  experiment_path: '/home/jp65/Biosignals_Research/EEG_BPE_Experiments/spectrum_vqvae_experiments'
+  experiment_path: 'SET THE PATH TO THE SAVE EXPERIMENTS'
   optimizer: AdamW
   lr: 0.00001 #1e-5
   weight_decay: 0.0001 #1e-4
@@ -68,7 +68,7 @@ vqvae_training:
 masked_modeling_training:
   batch_size: 512 #1024 #1024 #512 for TUAB temporal
   num_workers: 8
-  experiment_path: '/home/jp65/Biosignals_Research/EEG_BPE_Experiments/spectrum_vqvae_experiments'
+  experiment_path: 'SET THE PATH TO THE SAVE EXPERIMENTS'
   optimizer: AdamW
   lr: 0.00001 #1e-6
   weight_decay: 0.05
@@ -80,7 +80,7 @@ masked_modeling_training:
 classifier_training:
   batch_size: 1024 #1024 #512 for TUAB temporal
   num_workers: 8
-  experiment_path: '/home/jp65/Biosignals_Research/EEG_BPE_Experiments/spectrum_vqvae_classification_results'
+  experiment_path: 'SET THE PATH TO THE SAVE EXPERIMENTS'
   optimizer: AdamW
   lr: 0.00001 #1e-5
   weight_decay: 0.05 #1e-4
@@ -91,7 +91,7 @@ classifier_training:
 after_masked_classifier_training:
   batch_size: 512 #1024 #512 for TUAB temporal
   num_workers: 8
-  experiment_path: '/home/jp65/Biosignals_Research/EEG_BPE_Experiments/spectrum_vqvae_classification_results'
+  experiment_path: 'SET THE PATH TO THE SAVE EXPERIMENTS'
   optimizer: AdamW
   lr:  0.00001  #0.000001 #1e-6
   weight_decay: 0.05

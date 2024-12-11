@@ -623,21 +623,3 @@ if __name__ == "__main__":
     
 
 
-# TUEV temporal_separate stft window 1s hoplen 0.5s  # last model # Full Frequency # restart embedding -resampling rate 200
-    # loss at masked
-    # python freq_vqvae_tokens_aft_masked_classification.py --dataset_name 'TUEV' --signal_transform 'stft' --resampling_rate 200 --vqvae_pretrained_path '/home/jp65/Biosignals_Research/EEG_BPE_Experiments/spectrum_vqvae_experiments/temporal_separate_MSE_full_freq_window_len_200TUEV_stft_FREQ_VQVAE_pretraining_codebook_size_4096_emb_size_64beta0.2/vqvae_last_model.pth' --masked_pretrained_path '/home/jp65/Biosignals_Research/EEG_BPE_Experiments/spectrum_vqvae_experiments/masked_modeling_temporal_separate_full_freq_window_len_200_TUEV_restart_embedding_stft_beta0.2_LAT_Classification_VQVAE_num_epochs_50'   --gpu '3' --restart_embedding
-    # loss at all tokens
-    # python freq_vqvae_tokens_aft_masked_classification.py --dataset_name 'TUEV' --signal_transform 'stft' --resampling_rate 200 --vqvae_pretrained_path '/home/jp65/Biosignals_Research/EEG_BPE_Experiments/spectrum_vqvae_experiments/temporal_separate_MSE_full_freq_window_len_200TUEV_stft_FREQ_VQVAE_pretraining_codebook_size_4096_emb_size_64beta0.2/vqvae_last_model.pth' --masked_pretrained_path '/home/jp65/Biosignals_Research/EEG_BPE_Experiments/spectrum_vqvae_experiments/loss_for_all_tokens_masked_modeling_temporal_separate_full_freq_window_len_200_TUEV_restart_embedding_stft_beta0.2_LAT_Classification_VQVAE_num_epochs_50'   --gpu '0' --restart_embedding
-    # RTP
-    # python freq_vqvae_tokens_aft_masked_classification.py --dataset_name 'TUEV' --signal_transform 'stft' --resampling_rate 200 --vqvae_pretrained_path '/home/jp65/Biosignals_Research/EEG_BPE_Experiments/spectrum_vqvae_experiments/temporal_separate_MSE_full_freq_window_len_200TUEV_stft_FREQ_VQVAE_pretraining_codebook_size_4096_emb_size_64beta0.2/vqvae_last_model.pth' --masked_pretrained_path '/home/jp65/Biosignals_Research/EEG_BPE_Experiments/spectrum_vqvae_experiments/RTP_temporal_separate_full_freq_window_len_200_TUEV_restart_embedding_stft_beta0.2_LAT_Classification_VQVAE_num_epochs_50'   --gpu '2' --restart_embedding
-
-# #### Freq masking
-
-## Freq random masking
-    # python freq_vqvae_tokens_aft_masked_classification.py --dataset_name 'TUEV' --signal_transform 'stft' --resampling_rate 200 --vqvae_pretrained_path '/home/jp65/Biosignals_Research/EEG_BPE_Experiments/spectrum_vqvae_experiments/random_masking_temporal_separate_MSE_full_freq_window_len_200TUEV_stft_FREQ_VQVAE_pretraining_codebook_size_4096_emb_size_64beta0.2/vqvae_last_model.pth'  --masked_pretrained_path '/home/jp65/Biosignals_Research/EEG_BPE_Experiments/spectrum_vqvae_experiments/freq_random_masking_masked_modeling_temporal_separate_full_freq_window_len_200_TUEV_restart_embedding_stft_beta0.2_LAT_Classification_VQVAE_num_epochs_100'   --gpu '3' --restart_embedding
-   
-## Freq bin masking
-    # python freq_vqvae_tokens_aft_masked_classification.py --dataset_name 'TUEV' --signal_transform 'stft' --resampling_rate 200 --vqvae_pretrained_path '/home/jp65/Biosignals_Research/EEG_BPE_Experiments/spectrum_vqvae_experiments/freq_bin_masking_temporal_separate_MSE_full_freq_window_len_200TUEV_stft_FREQ_VQVAE_pretraining_codebook_size_4096_emb_size_64beta0.2/vqvae_last_model.pth'  --masked_pretrained_path '/home/jp65/Biosignals_Research/EEG_BPE_Experiments/spectrum_vqvae_experiments/freq_bin_masking_masked_modeling_temporal_separate_full_freq_window_len_200_TUEV_restart_embedding_stft_beta0.2_LAT_Classification_VQVAE_num_epochs_100'   --gpu '6' --restart_embedding
-
-### masked_loss_freq_bin_masking
-    # python freq_vqvae_tokens_aft_masked_classification.py --dataset_name 'TUEV' --signal_transform 'stft' --resampling_rate 200 --vqvae_pretrained_path '/home/jp65/Biosignals_Research/EEG_BPE_Experiments/spectrum_vqvae_experiments/masked_loss_freq_bin_masking_temporal_separate_MSE_full_freq_window_len_200TUEV_stft_FREQ_VQVAE_pretraining_codebook_size_4096_emb_size_64beta0.2/vqvae_last_model.pth' --masked_pretrained_path '/home/jp65/Biosignals_Research/EEG_BPE_Experiments/spectrum_vqvae_experiments/masked_token_pred_masked_loss_freq_bin_masking_temporal_separate_full_freq_window_len_200_TUEV_restart_embedding_stft_beta0.2_LAT_Classification_VQVAE_num_epochs_100'   --gpu '6' --restart_embedding

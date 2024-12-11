@@ -373,18 +373,3 @@ if __name__ == "__main__":
     print('Model saved')
     
     
-# stft
-# python freq_vqvae_tokenizer_pretraining.py --dataset_name 'SHHS' --signal_transform 'stft' --resampling_rate 200 --gpu '6'
-# python freq_vqvae_tokenizer_pretraining.py --dataset_name 'TUAB' --signal_transform 'stft' --resampling_rate 200 --gpu '7'
-# python freq_vqvae_tokenizer_pretraining.py --dataset_name 'TUEV' --signal_transform 'stft' --resampling_rate 200 --gpu '1'
-
-
-# multitaper
-# python freq_vqvae_tokenizer_pretraining.py --dataset_name 'SHHS' --signal_transform 'multitaper' --resampling_rate 200 --gpu '6'
-# python freq_vqvae_tokenizer_pretraining.py --dataset_name 'TUAB' --signal_transform 'multitaper' --resampling_rate 200 --gpu '5'
-# python freq_vqvae_tokenizer_pretraining.py --dataset_name 'TUEV' --signal_transform 'multitaper' --resampling_rate 200 --gpu ''
-
-
-# temporal
-# python freq_vqvae_tokenizer_pretraining.py --dataset_name 'SHHS'  --resampling_rate 200 --gpu '6'
-# python freq_vqvae_tokenizer_pretraining.py --dataset_name 'TUAB'  --resampling_rate 200 --gpu '4'

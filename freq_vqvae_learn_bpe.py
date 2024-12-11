@@ -174,20 +174,3 @@ if __name__ == '__main__':
     learn_BPE_script()
     
 
-# TUAB
-    # stft window 4s hoplen 0.5s
-    # python freq_vqvae_learn_bpe.py --dataset_name 'TUAB'  --signal_transform 'stft' --resampling_rate 256 --vqvae_pretrained_path '/home/jp65/Biosignals_Research/EEG_BPE_Experiments/spectrum_vqvae_experiments/TUAB_stft_FREQ_VQVAE_pretraining_codebook_size_4096_emb_size_64beta0.2/vqvae_last_model.pth'  --num_BPE_learn 512 --compress_noise --gpu '7'
-    # multitaper window 4s hoplen 0.5s
-    # python freq_vqvae_learn_bpe.py --dataset_name 'TUAB'  --signal_transform 'multitaper' --resampling_rate 256 --vqvae_pretrained_path '/home/jp65/Biosignals_Research/EEG_BPE_Experiments/spectrum_vqvae_experiments/TUAB_multitaper_FREQ_VQVAE_pretraining_codebook_size_4096_emb_size_64beta0.2/vqvae_last_model.pth'  --num_BPE_learn 512 --compress_noise --gpu '0'
-
-# SHHS
-    # stft window 4s hoplen 0.5s : (for 250 batches of 1024) # using best model checkpoint not last
-    # python freq_vqvae_learn_bpe.py --dataset_name 'SHHS'  --signal_transform 'stft' --resampling_rate 256 --vqvae_pretrained_path '/home/jp65/Biosignals_Research/EEG_BPE_Experiments/spectrum_vqvae_experiments/SHHS_stft_FREQ_VQVAE_pretraining_codebook_size_4096_emb_size_64beta0.2/vqvae_best_model.pth'  --num_BPE_learn 512 --compress_noise #--gpu '7'
-    
-    
-# TUEV temporal separation
-    # python freq_vqvae_learn_bpe.py --dataset_name 'TUEV'  --signal_transform 'stft' --resampling_rate 200 --vqvae_pretrained_path '/home/jp65/Biosignals_Research/EEG_BPE_Experiments/spectrum_vqvae_experiments/temporal_separate_MSE_full_freq_window_len_200TUEV_stft_FREQ_VQVAE_pretraining_codebook_size_4096_emb_size_64beta0.2/vqvae_last_model.pth'  --num_BPE_learn 512 --compress_noise --gpu '0'
-
-
-## TUEV freq bin masking
-    # python freq_vqvae_learn_bpe.py --dataset_name 'TUEV'  --signal_transform 'stft' --resampling_rate 200 --vqvae_pretrained_path '/home/jp65/Biosignals_Research/EEG_BPE_Experiments/spectrum_vqvae_experiments/freq_bin_masking_temporal_separate_MSE_full_freq_window_len_200TUEV_stft_FREQ_VQVAE_pretraining_codebook_size_4096_emb_size_64beta0.2/vqvae_last_model.pth'  --num_BPE_learn 512 --compress_noise --gpu '0'
